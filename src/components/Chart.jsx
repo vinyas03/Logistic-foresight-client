@@ -9,7 +9,7 @@ import {
   Legend
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
 ChartJS.register(
   CategoryScale,
@@ -29,7 +29,7 @@ const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart"
+      text: "Orders fulfilled"
     }
   }
 };
@@ -40,14 +40,14 @@ const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      label: "Product 1",
+      data: labels.map(() => faker.number.int({ min: 30, max: 1000 })),
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)"
     },
     {
-      label: "Dataset 2",
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      label: "Product 2",
+      data: labels.map(() => faker.number.int({ min: 20, max: 1000 })),
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)"
     }
@@ -57,6 +57,5 @@ const data = {
 function Chart() {
   return <Line options={options} data={data} />;
 }
-
 
 export default Chart;

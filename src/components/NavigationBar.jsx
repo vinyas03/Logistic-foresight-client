@@ -12,10 +12,10 @@ import {
 
 const navLinks = [
   { name: "Dashboard", icon: LayoutDashboard },
-  { name: "Activity", icon: Clock3 },
+//   { name: "Activity", icon: Clock3 },
   { name: "Analytics", icon: BarChart2 },
-  { name: "Transactions", icon: ArrowRightLeft },
-  { name: "Help center", icon: HelpCircle }
+//   { name: "Transactions", icon: ArrowRightLeft },
+  { name: "Help", icon: HelpCircle }
 ];
 
 const variants = {
