@@ -1,22 +1,20 @@
-//import { useState } from 'react'
-import NavigationBar from "./components/NavigationBar";
-import Dashboard from "./components/Dashboard";
-// import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 
 function App() {
-  //   const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
       <div className="w-full flex">
-        {/* Navigation bar */}
-        <NavigationBar />
         {/* Main component */}
         <main className="grow">
-          <Dashboard />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
         </main>
       </div>
-    </>
+    </Router>
   );
 }
 
