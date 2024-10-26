@@ -11,9 +11,13 @@ const apiHost = import.meta.env.VITE_API_HOST;
 
   const {
     vehicleCapacity,
-    warehouseLatLong,
+    //warehouseLatLong,
+    warehouseLat,
+    warehouseLong,
     setVehicleCapacity,
-    setWarehouseLatLong,
+    //setWarehouseLatLong,
+    setWarehouseLat,
+    setWarehouseLong,
     setMapData,
     mapData
   } = useStore();
@@ -52,7 +56,7 @@ const apiHost = import.meta.env.VITE_API_HOST;
   const handleClusterNow = async () => {
     const payload = {
       VehicleCapacity: Number(vehicleCapacity),
-      Warehouse: { Latitude: 12.979997278675235, Longitude: 77.57123784325745 }
+      Warehouse: { Latitude: warehouseLat, Longitude: warehouseLong }
     };
 
     try {
@@ -124,14 +128,26 @@ const apiHost = import.meta.env.VITE_API_HOST;
 
           {/* Warehouse Latitude/Longitude Input */}
           <div>
-            <span className="text-xl mr-4 mb-3">Warehouse Lat/Long: </span>
+            <span className="text-xl mr-4 mb-3">Warehouse Lat: </span>
             <input
               className="border-2 border-[#ff8c8c] rounded-sm outline-none p-1"
               type="text"
               name="latlong"
               id="latlong"
-              value={warehouseLatLong}
-              onChange={(e) => setWarehouseLatLong(e.target.value)} // Update Zustand store
+              value={warehouseLat}
+              onChange={(e) => setWarehouseLat(e.target.value)} // Update Zustand store
+            />
+          </div>
+          {/* Warehouse Latitude/Longitude Input */}
+          <div>
+            <span className="text-xl mr-4 mb-3">Warehouse Long: </span>
+            <input
+              className="border-2 border-[#ff8c8c] rounded-sm outline-none p-1"
+              type="text"
+              name="latlong"
+              id="latlong"
+              value={warehouseLong}
+              onChange={(e) => setWarehouseLong(e.target.value)} // Update Zustand store
             />
           </div>
         </div>
