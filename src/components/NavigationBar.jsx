@@ -4,6 +4,7 @@ import Logo from "./../assets/Logo.png";
 import LogoWide from "./../assets/LogoWide.png";
 import RightArrow from "./../assets/icons/RightArrow.svg";
 import { motion } from "framer-motion";
+
 import {
   BarChart2,
   HelpCircle
@@ -64,6 +65,7 @@ function NavigationBar() {
             <span className={isExpanded ? "block" : "hidden"}>About us</span>
           </div>
         </Link>
+
       </div>
     </motion.div>
   );

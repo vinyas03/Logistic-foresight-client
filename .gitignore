@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#testing
+tests
+
+#environment variables
+.env
+.env.development
