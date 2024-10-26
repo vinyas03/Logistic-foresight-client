@@ -12,13 +12,21 @@ import { useState, useEffect, useRef } from "react";
 import useStore from "../store";
 import useGet from "../hooks/useGet";
 import { toast } from "react-toastify";
-import icon from "../assets/icons/warehouseIcon.png";
+import wicon from "../assets/icons/warehouseIcon.png";
+import licon from "../assets/icons/deliverIcon.png"
 import L from 'leaflet';
 
 const warehouseIcon = L.icon({
-  iconUrl: icon,
+  iconUrl: wicon,
   iconSize: [40, 40], // Size of the icon
   iconAnchor: [12, 41], // The point of the icon which will correspond to marker's location
+  popupAnchor: [1, -34], // The point from which the popup should open relative to the iconAnchor
+});
+
+const deliverIcon = L.icon({
+  iconUrl: licon,
+  iconSize: [30, 30], // Size of the icon
+  iconAnchor: [12, 30], // The point of the icon which will correspond to marker's location
   popupAnchor: [1, -34], // The point from which the popup should open relative to the iconAnchor
 });
 
@@ -71,10 +79,14 @@ const Map = () => {
   
           // Render the marker only if it's not the warehouse location
           return !isWarehouseLocation ? (
-            <Marker position={pos} key={idx}>
-              <Popup>Lat: {pos[0]}, Long: {pos[1]}</Popup>
+            <Marker position={pos} key={idx} icon={deliverIcon}>
+              <Popup>Delivery Location: Lat: {pos[0]}, Long: {pos[1]}</Popup>
             </Marker>
-          ) : null;
+          ) : (
+            <Marker position={pos} key={idx} icon={warehouseIcon}>
+              <Popup>Warehouse Location</Popup>
+            </Marker>
+          );
         })}
         <Polyline
           positions={positions}
