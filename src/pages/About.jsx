@@ -1,5 +1,5 @@
 import NavigationBar from "../components/NavigationBar";
-import { TrendingUpDown, Group, Waypoints, Activity, Shuffle } from "lucide-react"; // Changed from ToggleLeft to Shuffle
+import { TrendingUpDown, Group, Waypoints, Activity, Shuffle } from "lucide-react";
 
 const About = () => {
   return (
@@ -22,23 +22,23 @@ const About = () => {
         <p className="text-2xl font-semibold text-[#ff8c8c]">Key Features: </p>
         {/* Container for feature boxes with decreased width */}
         <div className="p-3 rounded-sm text-lg text-justify flex flex-row justify-around">
-          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-64"> {/* Adjusted width */}
+          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-56"> 
             <p className="mb-2">Realtime Counter Predictions</p>
             <Activity className="h-12 w-12" />
           </div>
-          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-64"> {/* Adjusted width */}
+          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-56"> 
             <p className="mb-2">Dynamic Counter Allocation</p>
-            <Shuffle className="h-12 w-12" /> {/* Changed to Shuffle icon */}
+            <Shuffle className="h-12 w-12" /> 
           </div>
-          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-64"> {/* Adjusted width */}
+          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-56"> 
             <p className="mb-2">Realtime order forecasts</p>
             <TrendingUpDown className="h-12 w-12" />
           </div>
-          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-64"> {/* Adjusted width */}
+          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-56"> 
             <p className="mb-2">Clustered delivery locations</p>
             <Group className="h-12 w-12" />
           </div>
-          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-64"> {/* Adjusted width */}
+          <div className="bg-gray-50 p-3 hover:shadow-xl border-2 text-center flex flex-col items-center w-56"> 
             <p className="mb-2">Optimized route planning</p>
             <Waypoints className="h-12 w-12" />
           </div>
