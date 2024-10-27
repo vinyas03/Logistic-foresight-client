@@ -1,14 +1,11 @@
-import { useState} from "react";
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import Logo from "./../assets/Logo.png";
-import LogoWide from "./../assets/LogoWide.png";
-import RightArrow from "./../assets/icons/RightArrow.svg";
+import Logo from "../assets/Logo.png";
+import LogoWide from "../assets/LogoWide.png";
+import RightArrow from "../assets/icons/RightArrow.svg";
 import { motion } from "framer-motion";
 
-import {
-  BarChart2,
-  HelpCircle
-} from "lucide-react"; 
+import { BarChart2, HelpCircle } from "lucide-react";
 
 const variants = {
   expanded: { width: "20%" },
@@ -65,7 +62,6 @@ function NavigationBar() {
             <span className={isExpanded ? "block" : "hidden"}>About us</span>
           </div>
         </Link>
-
       </div>
     </motion.div>
   );
