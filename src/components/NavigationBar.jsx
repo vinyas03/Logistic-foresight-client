@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import LogoWide from "../assets/LogoWide.png";
-import RightArrow from "../assets/icons/RightArrow.svg";
+import RightArrow from "../assets/icons/rightArrow.svg";
 import { motion } from "framer-motion";
 
 import { BarChart2, HelpCircle } from "lucide-react";
