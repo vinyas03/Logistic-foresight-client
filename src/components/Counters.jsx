@@ -26,7 +26,7 @@ function Counters() {
       {/* Orders */}
       <div className="w-2/5 h-[150px] border rounded flex flex-col p-3 text-gray-600 hover:border-[#ff8c8c] transition-colors">
         <h3 className="text-xl font-semibold">
-          Current Orders: {Math.max(currentOrders, 0)} (
+          Current Orders: {(currentOrders<=0 || currentOrderItems<= 0)?0:currentOrders} (
           {Math.max(currentOrderItems, 0)})
         </h3>
         <div
@@ -34,8 +34,8 @@ function Counters() {
             currentOrders > 0 ? "flex-row-reverse" : "flex-row"
           } border p-1`}>
           {/* Dynamically rendered */}
-          {currentOrders > 0 ? (
-            Array.from({ length: Math.min(currentOrders, 9) }).map(
+          {(currentOrders>0 && currentOrderItems> 0) ? (
+            Array.from({ length: Math.min(currentOrders, 12) }).map(
               (_, index) => (
                 <div
                   key={index}
